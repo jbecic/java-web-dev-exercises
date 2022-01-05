@@ -14,7 +14,7 @@ public class countingCharacters {
 
         System.out.println("Please enter in a word, phrase, sentance or paragraph:");
         userInput = input.nextLine();
-        userInput = userInput.trim().toLowerCase(Locale.ROOT);
+        userInput = userInput.trim().toLowerCase(Locale.ROOT).replaceAll("\\d", "");
         input.close();
         String[] tokens = userInput.split(delims);
         userInput = "";
@@ -32,7 +32,7 @@ public class countingCharacters {
         }
 
         for (Map.Entry<String, Integer> character : charactersTotal.entrySet()) {
-            System.out.println(character.getKey() + " " + character.getValue());
+            System.out.println(character.getKey() + ": " + character.getValue());
         }
     }
 }
