@@ -16,9 +16,10 @@ public class Resteraunt {
         menu.addMenuItem(ketchup);
         menu.addMenuItem(ribeye);
         ribeye.setIsNew(true);
+        salad.setIsNew(true);
+        poppers.setIsNew(true);
 
         menu.print();
-        System.out.println(menu.getLastUpdated());
         salad.print();
         menu.removeMenuItem(ribeye);
         menu.print();
